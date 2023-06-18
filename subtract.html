@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtraction</title>
+    <style>
+        body{
+            background-image: url(Arithmetic-Operations.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            color: black;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        .inputs{
+            margin-left: 275px;
+            height: 50px;
+        }
+        input{
+            height: 50px;
+            width: 300px;
+            color: brown;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        .plus{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .backbtn{
+            margin-left: 275px;
+        }
+        button{
+            height: 30px;
+            width: 60px;
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: green;
+        }
+        .ans{
+            margin-top: 50px;
+            margin-left: 400px;
+        }
+        .ansbtn{
+            height: 55px;
+            width: 80px;
+        }
+        p{
+            font-size: 30px;
+            color: black;
+            font-weight: bolder;
+            margin-left: -20px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subtraction</h1>
+        <div class="inputs">
+        <input type="number" name="fno" id="fno"> <b class="plus">-</b>
+        <input type="number" name="sno" id="sno">  
+    </div>
+        <br>
+        <button class="backbtn"><a href="home.html"> Back </a></button>
+
+        <div class="ans">
+                <input type="number" name="ians" id="ians" placeholder="Enter your answer....">
+                <button class="ansbtn" onclick="myfunct()">Answer</button>
+                <p id="correctans"></p>
+        </div>
+        
+        <script>
+            var a=Math.floor(Math.random()*100);
+            var b=Math.floor(Math.random()*100);
+            document.getElementById("fno").value=a;
+            document.getElementById("sno").value=b;
+            
+            function myfunct(){
+                var res= a-b;
+                var ans= document.getElementById("ians").value;
+
+                if (res==ans) {
+                    document.getElementById("correctans").innerHTML= "You guess it correct!!"
+                }else{
+                    document.getElementById("correctans").innerHTML= "Correct ans is "+ res +". Better luck next time!!";
+                }
+            }
+            
+        </script>
+    
+</body>
+</html>
